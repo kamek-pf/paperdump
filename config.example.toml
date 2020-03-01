@@ -1,0 +1,8 @@
+# Path of the folder to watch
+watch_folder = "/home/kamek/tmpin"
+
+# Where processed documents should be moved
+destination_folder = "/home/kamek/tmpout"
+
+# Delay before processing a file (we have to wait for file uploads to finish)
+process_delay = "10min"
