@@ -168,7 +168,7 @@ fn file_watcher(
                     path.extension()
                         .and_then(|os_extension| os_extension.to_str())
                         .map(|extension| {
-                            let output_name = output_name + extension;
+                            let output_name = output_name + "." + extension;
                             let destination =
                                 Path::new(&cfg.destination_folder).join(Path::new(&output_name));
 

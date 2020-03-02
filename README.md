@@ -29,6 +29,7 @@ pacman -S clang leptonica tesseract tesseract-data-eng
 
 ## Build
 `cargo build --release`, you'll need a working Rust toolchain to build this project. \
+The build will be available at `target/release/paperdump`. \
 Check out `rustup` to get up and running quickly.
 
 ## Usage
