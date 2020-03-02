@@ -10,5 +10,5 @@ language = "eng"
 # Delay before processing a file. Documents are uploaded by chunks,
 # we have to wait until the transfer is complete.
 # By default, files will be processed 2 minutes after the last chunk is received.
-# We recommend not going below two minutes.
-process_delay = "2min"
+# We recommend not going below 30 sec
+process_delay = "30s"

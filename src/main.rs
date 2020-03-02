@@ -165,11 +165,12 @@ fn file_watcher(
             // Move the original next the the the Tesseract output
             .and_then(|ocr_ok| {
                 if ocr_ok {
-                    path.file_name()
-                        .and_then(|os_name| os_name.to_str())
-                        .map(|name| {
+                    path.extension()
+                        .and_then(|os_extension| os_extension.to_str())
+                        .map(|extension| {
+                            let output_name = output_name + extension;
                             let destination =
-                                Path::new(&cfg.destination_folder).join(Path::new(&name));
+                                Path::new(&cfg.destination_folder).join(Path::new(&output_name));
 
                             let res = fs::rename(path.clone(), destination).ok();
                             res.is_some()

@@ -22,10 +22,18 @@ From now on, if you ever need to find the original document, just use can use [`
 (or any other full text search tool) with a keyword, and you'll know the exact date you scanned the document you're looking for.
 
 ## Dependencies
-You'll need `clang`, `leptonica` and `tesseract` with support for your language. On arch:
+You'll need `clang`, `leptonica` and `tesseract` with support for your language to build and run the project. On arch:
 ```
 pacman -S clang leptonica tesseract tesseract-data-eng
 ```
 
-## Usage
+## Build
+`cargo build --release`, you'll need a working Rust toolchain to build this project. \
+Check out `rustup` to get up and running quickly.
 
+## Usage
+Run `paperdump -c config.toml`, let it run in the background. \
+Files uploaded to the `watch_folder` will be processed and moved to the `destination_folder`.
+
+## Credits
+Credits to my coworker Lewis for the cool idea !
