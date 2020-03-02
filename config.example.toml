@@ -1,8 +1,8 @@
 # Path of the folder to watch
-watch_folder = "/home/kamek/tmpin"
+watch_folder = "/tmp/paperdump_in"
 
 # Where processed documents should be moved
-destination_folder = "/home/kamek/tmpout"
+destination_folder = "/tmp/paperdump_out"
 
 # Language passed to Tesseract
 language = "eng"
