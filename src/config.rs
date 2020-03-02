@@ -19,6 +19,7 @@ struct Args {
 pub struct Config {
     pub watch_folder: PathBuf,
     pub destination_folder: PathBuf,
+    pub language: String,
     #[serde(with = "humantime_serde")]
     pub process_delay: Duration,
 }

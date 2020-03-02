@@ -4,5 +4,11 @@ watch_folder = "/home/kamek/tmpin"
 # Where processed documents should be moved
 destination_folder = "/home/kamek/tmpout"
 
-# Delay before processing a file (we have to wait for file uploads to finish)
-process_delay = "10min"
+# Language passed to Tesseract
+language = "eng"
+
+# Delay before processing a file. Documents are uploaded by chunks,
+# we have to wait until the transfer is complete.
+# By default, files will be processed 2 minutes after the last chunk is received.
+# We recommend not going below two minutes.
+process_delay = "2min"

@@ -15,8 +15,17 @@ So here's the idea, when a bill (or whatever else) comes in, deal with it, then:
 And that's it. When you're done with your bills, just stack them in a folder, in the order you receive them. \
 In the background, `paperdump` watches your filesystem. When a document comes in it will:
 - Move it to a permanent directory
-- Compute a small preview
 - Run [Tesseract](https://en.wikipedia.org/wiki/Tesseract) on the scan, which gets you a plain text file.
+- [TODO]: Compute a small preview
 
 From now on, if you ever need to find the original document, just use can use [`ripgrep`](https://github.com/BurntSushi/ripgrep)
 (or any other full text search tool) with a keyword, and you'll know the exact date you scanned the document you're looking for.
+
+## Dependencies
+You'll need `clang`, `leptonica` and `tesseract` with support for your language. On arch:
+```
+pacman -S clang leptonica tesseract tesseract-data-eng
+```
+
+## Usage
+
